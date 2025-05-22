@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love You Kaademme</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Georgia', serif;
+    }
+
+    /* Starry Background */
+    body {
+      background: #0d1b2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/starfield.png') repeat top center;
+      animation: starAnimation 100s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes starAnimation {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 1000px; }
+    }
+
+    /* Poem Styling */
+    .poem-container {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 2s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="poem-container">
+    <h1>Love You Kaademme</h1>
+    <p>
+Running Through My Mind
+You don’t walk,  
+you don’t pause—  
+you sprint through my thoughts,  
+without a cause.
+          ~puttu's girl
+    </p>
+  </div>
+</body>
+</html>
